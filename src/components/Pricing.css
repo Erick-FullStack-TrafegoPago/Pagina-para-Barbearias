@@ -1,0 +1,345 @@
+/* BASE STYLES - Mantidos do original */
+.pricing__header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pricing__header .section-label {
+  justify-content: center;
+}
+
+.pricing__header .section-label::before {
+  display: none;
+}
+.pricing__header .section-desc {
+  margin: 0 auto;
+}
+
+/* GRID - Atualizado para 5 cards */
+.pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: 32px;
+}
+
+.pricing__grid--models {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  background: transparent;
+  border: none;
+}
+
+/* PLAN CARD - Base */
+.plan-card {
+  background: var(--bg);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  transition: all 0.3s;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.plan-card:hover {
+  background: var(--bg2);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.plan-card--highlight {
+  background: var(--bg2);
+  border: 2px solid var(--gold);
+}
+
+.plan-card--highlight:hover {
+  border-color: var(--gold);
+  box-shadow: 0 8px 32px rgba(0, 255, 163, 0.15);
+}
+
+/* BADGE */
+.plan-card__badge {
+  position: absolute;
+  top: -1px;
+  right: 32px;
+  background: var(--gold);
+  color: #000;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 0 0 6px 6px;
+}
+
+/* ICON - Novo para modelos */
+.plan-card__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.plan-card--highlight .plan-card__icon {
+  background: rgba(0, 255, 163, 0.1);
+  border-color: var(--gold);
+}
+
+/* Cores diferentes por modelo */
+.plan-card[data-color="green"] .plan-card__icon {
+  color: var(--gold);
+}
+.plan-card[data-color="blue"] .plan-card__icon {
+  color: #3b82f6;
+}
+.plan-card[data-color="purple"] .plan-card__icon {
+  color: #a855f7;
+}
+.plan-card[data-color="orange"] .plan-card__icon {
+  color: #f97316;
+}
+.plan-card[data-color="cyan"] .plan-card__icon {
+  color: #06b6d4;
+}
+
+.plan-card[data-color="blue"]:hover {
+  border-color: #3b82f6;
+}
+.plan-card[data-color="purple"]:hover {
+  border-color: #a855f7;
+}
+.plan-card[data-color="orange"]:hover {
+  border-color: #f97316;
+}
+.plan-card[data-color="cyan"]:hover {
+  border-color: #06b6d4;
+}
+
+/* HEADER */
+.plan-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-card__name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+/* TAGLINE - Novo */
+.plan-card__tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.plan-card__desc {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* IDEAL SECTION - Novo */
+.plan-card__ideal {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.plan-card__ideal svg {
+  color: var(--gold);
+}
+
+.plan-card__ideal > span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.plan-card__ideal p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* FEATURES */
+.plan-card__features {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.plan-card__features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.plan-card__features li svg {
+  color: var(--gold);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* NOTE INSIDE CARD - Novo */
+.plan-card__note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+/* BUTTONS */
+.plan-card .btn-primary,
+.plan-card .btn-outline {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* CTA SECTION - Novo */
+.pricing__cta {
+  background: linear-gradient(135deg, var(--bg2) 0%, var(--bg) 100%);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 48px 32px;
+  text-align: center;
+  margin: 48px 0 32px;
+}
+
+.pricing__cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.pricing__cta h3 {
+  font-family: var(--font-display);
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  margin: 0;
+}
+
+.pricing__cta p {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.pricing__cta .btn-primary {
+  margin-top: 8px;
+}
+
+/* BOTTOM NOTE */
+.pricing__note {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pricing__note span {
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1200px) {
+  .pricing__grid--models {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing__grid--models {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .plan-card {
+    padding: 32px 24px;
+  }
+
+  .pricing__cta {
+    padding: 40px 24px;
+  }
+
+  .pricing__cta h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .plan-card__name {
+    font-size: 20px;
+  }
+
+  .pricing__header {
+    margin-bottom: 40px;
+  }
+
+  .pricing__cta {
+    margin: 32px 0 24px;
+  }
+}
+
+.plan-card__price { font-family: var(--font-display); font-size: 36px; color: var(--gold); letter-spacing: 0.02em; margin: 8px 0; }
+.plan-card__price { font-family: var(--font-display); font-size: 36px; color: var(--gold); letter-spacing: 0.02em; margin: 8px 0; }
+.pricing__sub-title { font-family: var(--font-display); font-size: 28px; letter-spacing: 0.05em; color: var(--text); margin-bottom: 24px; }
+.pricing__piercing-grid { display: flex; flex-direction: column; gap: 12px; max-width: 600px; }
+.piercing-plan { display: flex; align-items: center; gap: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 20px 24px; }
+.piercing-plan__num { font-family: var(--font-display); font-size: 48px; color: var(--gold); line-height: 1; min-width: 40px; }
+.piercing-plan__info { flex: 1; }
+.piercing-plan__info strong { display: block; font-size: 16px; color: var(--text); margin-bottom: 4px; }
+.piercing-plan__info span { font-size: 13px; color: var(--text-muted); }
+.piercing-plan__price { font-family: var(--font-display); font-size: 28px; color: var(--gold); }

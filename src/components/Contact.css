@@ -1,0 +1,152 @@
+.contact { background: var(--bg2); }
+
+.contact__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact__desc {
+  font-size: 16px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.contact__channels { display: flex; flex-direction: column; gap: 16px; }
+
+.contact__channel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: all 0.2s;
+  color: var(--text);
+}
+
+.contact__channel:hover {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.04);
+}
+
+.contact__channel svg { color: var(--gold); flex-shrink: 0; }
+
+.contact__channel strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.contact__channel span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Form */
+.contact__right {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 40px;
+  border-radius: 4px;
+}
+
+.contact__form { display: flex; flex-direction: column; gap: 20px; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 14px;
+  padding: 12px 16px;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.form-group select { cursor: pointer; }
+.form-group textarea { resize: vertical; min-height: 100px; }
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.contact__submit { width: 100%; justify-content: center; }
+
+/* Success */
+.contact__success {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.contact__success-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__success h3 { font-size: 22px; font-weight: 700; }
+.contact__success p { color: var(--text-muted); font-size: 14px; }
+
+@media (max-width: 900px) {
+  .contact__inner { grid-template-columns: 1fr; gap: 40px; }
+  .contact__right { padding: 28px 24px; }
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+}
+
+.contact__hours { margin-top: 24px; }
+.contact__hours-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.contact__hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 13px; color: var(--text-muted); }
+.contact__hours-grid span:nth-child(odd) { color: var(--text); }
+.contact__hours { margin-top: 24px; }
+.contact__hours-title { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+.contact__hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 16px; font-size: 13px; color: var(--text-muted); }
+.contact__hours-grid span:nth-child(odd) { color: var(--text); }
+.contact__fidelidade { display: flex; gap: 16px; align-items: center; margin-top: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: 4px; padding: 16px; }
+.contact__fidelidade img { width: 80px; height: auto; border-radius: 4px; object-fit: cover; flex-shrink: 0; }
+.contact__fidelidade strong { display: block; font-size: 14px; color: var(--gold); margin-bottom: 4px; }
+.contact__fidelidade p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }

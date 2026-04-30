@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ArrowRight, Scissors, Users, Clock } from 'lucide-react'
 import './Hero.css'
 
-const words = ['ESTILO', 'ARTE', 'ATITUDE', 'CLASSE']
+const words = [ 'ARTE',  'PAIXÃO', 'CONFIANÇA', 'AUTO-ESTIMA', 'IDENTIDADE'] 
 
 export default function Hero() {
   const [wordIdx, setWordIdx] = useState(0)

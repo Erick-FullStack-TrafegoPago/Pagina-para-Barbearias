@@ -13,7 +13,7 @@ export default function Contact() {
     try {
       await supabase.from("contatos").insert([{ nome: form.name, telefone: form.phone, servico: form.service, mensagem: form.message, data_contato: new Date().toISOString() }]);
     } catch (err) { console.log("Supabase não configurado"); }
-    const msg = `Olá Tio Jack! Vim pelo site.\n\n*Nome:* ${form.name}\n*Telefone:* ${form.phone}\n*Serviço:* ${form.service}\n*Observação:* ${form.message}`;
+    const msg = `Olá SUA BARBEARIA! Vim pelo site.\n\n*Nome:* ${form.name}\n*Telefone:* ${form.phone}\n*Serviço:* ${form.service}\n*Observação:* ${form.message}`;
     window.open(`https://wa.me/5521966510777?text=${encodeURIComponent(msg)}`, "_blank");
     setSent(true);
     setForm({ name: "", phone: "", service: "", message: "" });
@@ -45,7 +45,7 @@ export default function Contact() {
             </div>
           </div>
           <div className="contact__fidelidade">
-            <img src="/imgs/fidelidade.jpg" alt="Cartão Fidelidade Tio Jack" />
+            <img src="/imgs/fidelidade.jpg" alt="Cartão Fidelidade SUA BARBEARIA" />
             <div>
               <strong>Cartão Fidelidade</strong>
               <p>Acumule 10 cortes e o 11º é gratuito. Com 20 cortes, ganhe uma tatuagem!</p>

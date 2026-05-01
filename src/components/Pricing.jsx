@@ -41,7 +41,7 @@ export default function Pricing() {
                 <ul className="plan-card__features">
                   {plan.includes.map((item) => <li key={item}><Check size={14} /><span>{item}</span></li>)}
                 </ul>
-                <a href="https://wa.me/55219665xxxxx?text=Olá%20Tio%20Jack!%20Quero%20agendar." target="_blank" rel="noreferrer" className={plan.highlight ? "btn-primary" : "btn-outline"}>
+                <a href="https://wa.me/55219665xxxxx?text=SUA%20Tio%20BARBEARIA!%20Quero%20agendar." target="_blank" rel="noreferrer" className={plan.highlight ? "btn-primary" : "btn-outline"}>
                   <span>{plan.cta}</span>
                 </a>
                 <div className="plan-card__note">✂️ Agende pelo WhatsApp</div>
@@ -70,7 +70,7 @@ export default function Pricing() {
           <div className="pricing__cta-content">
             <h3>Dúvidas sobre qual serviço?</h3>
             <p>Me manda uma mensagem e te ajudo a escolher o que é melhor para você.</p>
-            <a href="https://wa.me/552196651xxxx?text=Olá%20Tio%20Jack!" target="_blank" rel="noreferrer" className="btn-primary">
+            <a href="https://wa.me/552196651xxxx?text=Olá%20SUA%20BARBEARIA!" target="_blank" rel="noreferrer" className="btn-primary">
               <span>Falar no WhatsApp</span><Zap size={16} />
             </a>
           </div>

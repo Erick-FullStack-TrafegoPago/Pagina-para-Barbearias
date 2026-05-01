@@ -7,8 +7,8 @@ export default function Footer() {
       <div className="container footer__inner">
         <div className="footer__brand">
           <a href="#hero" className="footer__logo">
-            <img src="/imgs/logo.png" alt="Tio Jack" style={{width:24,height:24,objectFit:'contain',filter:'brightness(0) invert(1)'}} />
-            <span>TIO<strong>JACK</strong></span>
+            <img src="/imgs/logo.png" alt="SUA BARBEARIA" style={{width:24,height:24,objectFit:'contain',filter:'brightness(0) invert(1)'}} />
+            <span>SUA<strong>BARBEARIA</strong></span>
           </a>
           <p>Barbearia, Tattoo e Piercing em São João de Meriti. Arte, estilo e atitude num só lugar.</p>
           <div className="footer__social">
@@ -33,7 +33,7 @@ export default function Footer() {
       </div>
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
-          <span>© {new Date().getFullYear()} Tio Jack. Todos os direitos reservados.</span>
+          <span>© {new Date().getFullYear()} SUA BARBEARIA. Todos os direitos reservados.</span>
           <span>Barbearia · Tattoo · Piercing ✂️</span>
         </div>
       </div>

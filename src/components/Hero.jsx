@@ -35,7 +35,7 @@ export default function Hero() {
           </h1>
           <p className="hero__desc">
             Cortes precisos, tattoos autorais e piercings com segurança total.
-            Um lugar onde arte e estilo se encontram. Bem-vindo ao universo do Tio Jack.
+            Um lugar onde arte e estilo se encontram. Bem-vindo ao universo do SUA BARBEARIA.
           </p>
           <div className="hero__actions">
             <a href="#contato" className="btn-primary">
@@ -66,10 +66,10 @@ export default function Hero() {
 
         <div className="hero__visual">
           <div className="hero__logo-display">
-            <img src="/imgs/logo.png" alt="Tio Jack" className="hero__logo-big" />
+            <img src="/imgs/logo.png" alt="SUA BARBEARIA" className="hero__logo-big" />
             <div className="hero__logo-name">
-              <span className="hero__logo-tio">TIO</span>
-              <span className="hero__logo-jack">JACK</span>
+              <span className="hero__logo-tio">SUA</span>
+              <span className="hero__logo-jack">BARBEARIA</span>
             </div>
             <p className="hero__logo-sub">Barbearia · Tattoo · Piercing</p>
           </div>

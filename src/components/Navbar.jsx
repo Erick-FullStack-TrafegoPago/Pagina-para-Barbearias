@@ -68,8 +68,8 @@ export default function Navbar() {
       <header className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
         <div className="container navbar__inner">
           <a href="#hero" className="navbar__logo">
-            <img src="/imgs/logo.png" alt="Tio Jack" className="navbar__logo-img" />
-            <span>TIO<strong>JACK</strong></span>
+            <img src="/imgs/logo.png" alt="SUA BARBEARIA" className="navbar__logo-img" />
+            <span>SUA<strong>BARBEARIA</strong></span>
           </a>
 
           {/* Nav desktop (mantida igual) */}

@@ -70,23 +70,38 @@
   display: none;
   color: var(--text);
   padding: 4px;
+  position: relative;
+  z-index: 1200;
 }
 
 @media (max-width: 900px) {
   .navbar__toggle { display: flex; }
+
+  /*
+   * FIX DO BUG: backdrop-filter no .navbar--scrolled cria um stacking context
+   * que prende o menu mobile (position:fixed) dentro do header.
+   * Desativamos o backdrop-filter no mobile para o menu cobrir a tela inteira.
+   */
+  .navbar--scrolled {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(8, 8, 8, 0.98); /* fundo sólido compensa o blur */
+  }
 
   .navbar__nav {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100%;
     background: var(--bg);
+    z-index: 1100;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 28px;
+    overflow: hidden;
   }
 
   .navbar__nav--open { display: flex; }
@@ -96,3 +111,51 @@
 }
 
 .navbar__logo-icon { font-size: 16px; }
+
+/* ── Mobile Menu Portal ──────────────────────────────────────────────────────
+   Renderizado diretamente no <body> via React Portal.
+   Não herda nenhum stacking context — funciona igual em qualquer seção.
+─────────────────────────────────────────────────────────────────────────────*/
+.mobile-menu-overlay {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    z-index: 9999;
+    overflow: hidden;
+  }
+
+  .mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 20px;
+    color: var(--text);
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .mobile-menu-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+
+  /* Esconde a nav desktop no mobile */
+  .navbar__nav--desktop {
+    display: none;
+  }
+}
